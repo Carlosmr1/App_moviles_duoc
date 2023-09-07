@@ -1,13 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>recuperarCon</ion-title>
+    <ion-title>Recuperar Contraseña</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">recuperarCon</ion-title>
+      <ion-title size=""> Recuperar Contraseña</ion-title>
     </ion-toolbar>
   </ion-header>
+   <ion-label>Email</ion-label><br>
+   <ion-input placeholder="example@duocuc.cl"></ion-input>
+   <ion-label>Nueva Contraseña</ion-label><br>
+   <ion-input placeholder="Contraseña"></ion-input>
+   <ion-label>Repetir Nueva Contraseña</ion-label><br>
+   <ion-input placeholder="Contraseña"></ion-input>
+   <ion-button (click)="cont()">Ingresar</ion-button>
+
 </ion-content>

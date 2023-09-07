@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.page.html',
@@ -8,9 +9,11 @@ import { Router } from '@angular/router';
 })
 export class PrincipalPage implements OnInit {
 
-  constructor(private Router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+  cerrar(){
+    this.router.navigate(['/home'])}
   
 }
