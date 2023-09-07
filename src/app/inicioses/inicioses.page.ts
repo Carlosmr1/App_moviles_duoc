@@ -12,9 +12,16 @@ export class IniciosesPage implements OnInit {
 
   ngOnInit() {
   }
-  IniciosesPage(){
+  principal(){
     
-      this.router.navigate(['/detail'])
+      this.router.navigate(['/principal'])
     }
   
+  registro(){
+    this.router.navigate(['/registro'])
+  }
+  
+  recuperar(){
+    this.router.navigate(['/recuperar-con'])
+  }
 }

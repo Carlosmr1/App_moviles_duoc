@@ -15,9 +15,9 @@
     <ion-input placeholder="Ingrese su Email"></ion-input>
     <ion-label>Contraseña</ion-label>
     <ion-input  type="password"   placeholder="Ingrese su Contraseña"></ion-input>
-    <ion-button>Ingresar</ion-button> <br>
-    <a href="registro.page.html">¿No tiene cuenta?</a><br>
-    <a href="recuperar-con.page.html">¿Olvido su contraseña?</a>
+    <ion-button (click)="principal()">Ingresar</ion-button> <br>
+    <a (click)="registro()">¿No tiene cuenta?</a><br>
+    <a (click)="recuperar()">¿Olvido su contraseña?</a>
 
 
   </div>
