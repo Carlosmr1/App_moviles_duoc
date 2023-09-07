@@ -12,4 +12,5 @@ export class RecuperarConPage implements OnInit {
   ngOnInit() {
   }
 
+  
 }

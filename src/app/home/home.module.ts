@@ -8,7 +8,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 //Agregué
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 //import {Router, NavigationExtras, RouterLinkWithHref} from '@angular/router';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//api mapa
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     //Agregué
     MatButtonToggleModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {}
