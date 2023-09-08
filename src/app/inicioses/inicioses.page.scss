@@ -1,7 +1,21 @@
 .mi-textfield {
     background-color: #FFFFFF;
   }
-
+.label {
+    margin-left: 8%;
+}
+.link {
+    justify-content: center;
+    text-align: center;
+}
+ion-button{
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    
+   
+}
 ion-content{ --ion-background-color:#f8efbd};
 
 

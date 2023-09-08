@@ -13,17 +13,31 @@
   <div id="logo">
     <img src="assets/img/logoapp2.png" alt="milogo">
   </div>
-  <div id="sesion">
-    <ion-label>Email</ion-label>
+  <div id="sesion" class="link">
+    
+    <ion-label >
+      Email
+    </ion-label>
+    
     <ion-card class="mi-textfield">
-    <ion-input class="mi-textfield" placeholder="example@duocuc.cl"></ion-input>
+      <ion-input class="mi-textfield" placeholder="example@duocuc.cl"></ion-input>
     </ion-card>
-    <ion-label>Contraseña</ion-label>
-    <ion-input  type="password"   placeholder="Ingrese su Contraseña"></ion-input>
-    <ion-button (click)="principal()">Ingresar</ion-button> <br>
-    <a (click)="registro()">¿No tiene cuenta?</a><br>
-    <a (click)="recuperar()">¿Olvido su contraseña?</a>
-
+    
+    <ion-label >
+      Contraseña
+    </ion-label>
+    
+    <ion-card class="mi-textfield">
+      <ion-input  type="password" placeholder="Ingrese su Contraseña"></ion-input>
+    </ion-card>
+    
+    <ion-button (click)="principal()">
+      Ingresar
+    </ion-button> <br>
+    <div class="link">
+    <a  (click)="registro()">¿No tiene cuenta?</a><br>
+    <a  (click)="recuperar()">¿Olvido su contraseña?</a>
+    </div>
 
   </div>
 
