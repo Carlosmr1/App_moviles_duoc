@@ -28,10 +28,10 @@ export class MapaPage implements OnInit {
       forceCreate:true,
       config: {
         center:{
-        lat: 33.6,
-        lng: -117.9,
+        lat: -33.03366893587673,  
+        lng: -71.53445815217059,
         },
-        zoom: 8,
+        zoom: 19,
       },
       
 
