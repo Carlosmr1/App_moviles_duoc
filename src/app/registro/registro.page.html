@@ -15,15 +15,38 @@
   </div>
 
 
-  <div>
-   <ion-label>Nombres</ion-label><br>
-   <ion-input></ion-input>
+  <div class="link">
+    <ion-label>Nombres</ion-label>
+    <ion-card class="textfield">
+      <ion-input></ion-input>
+    </ion-card>
+
+    <ion-label>Apellidos</ion-label>
+    <ion-card class="textfield">
+      <ion-input></ion-input>
+    </ion-card>
+
+     <ion-label>Telefono</ion-label>
+    <ion-card class="textfield"> 
+      <ion-input></ion-input>
+    </ion-card>
+
+    <ion-label placeholder="example@duocuc.cl">Email</ion-label >
+    <ion-card class="textfield">  
+      <ion-input placeholder="example@duocuc.cl"></ion-input>
+    </ion-card>
+
+    <ion-label>Contraseña</ion-label>
+    <ion-card class="textfield">
+      <ion-input></ion-input>
+    </ion-card>
+    
    
-   <ion-label>Apellidos</ion-label><br><ion-input></ion-input>
-   <ion-label>Telefono</ion-label><br><ion-input></ion-input>
-   <ion-label placeholder="example@duocuc.cl">Email</ion-label ><br><ion-input placeholder="example@duocuc.cl"></ion-input>
-   <ion-label>Contraseña</ion-label><br><ion-input></ion-input>
-   <ion-label>Repetir Contraseña</ion-label><ion-input></ion-input>
+    <ion-label>Repetir Contraseña</ion-label>
+    <ion-card class="textfield">
+    <ion-input></ion-input>
+    </ion-card>
+    <ion-button (click)="inicioses()">Aceptar</ion-button>
   </div>
-  <ion-button (click)="inicioses()">Aceptar</ion-button>
+  
 </ion-content>

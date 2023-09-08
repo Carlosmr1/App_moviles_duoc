@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>mapa</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content>
   <div class="contenedor">
     <capacitor-google-map #map></capacitor-google-map>
   </div>
-  <div>
-      A donde quieres ir?
-    <ion-card>
-     <ion-input placeholder="Ingrese Ubicación">
-      
-     </ion-input>
-    </ion-card>
+  <div class="link">
+    <div class="animated-text">
+      <br>
+      <span class="word red">a</span>
+      <span class="space"></span>
+      <span class="word green">dónde</span>
+      <span class="space"></span>
+      <span class="word blue">quieres</span>
+      <span class="space"></span>
+      <span class="word orange">ir?</span>
+      <span class="word purple"></span>
+      <ion-card>
+        <ion-input class="textfield" placeholder="Ingrese Ubicación">
+         
+        </ion-input>
+       </ion-card>
+    </div>
+  
   </div>
+
+  
   <ion-button class="boton">Buscar</ion-button>
 </ion-content>
 
