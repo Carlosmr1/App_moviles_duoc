@@ -19,5 +19,8 @@ export class PrincipalPage implements OnInit {
   map(){
     this.router.navigate(['/mapa'])
   }
+  per(){
+    this.router.navigate(['/perfil'])
+  }
   
 }
