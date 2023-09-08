@@ -16,4 +16,8 @@ export class PrincipalPage implements OnInit {
   cerrar(){
     this.router.navigate(['/home'])}
   
+  mapa(){
+    this.router.navigate(['/mapa'])
+  }
+  
 }
