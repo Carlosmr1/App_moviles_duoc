@@ -1,5 +1,9 @@
 # App_moviles
- Duoc on WHeels
+ 
+PARA HACER VISIBLE EL MAPA
+
+ npm i @capacitor/google-maps
+  npm i @capacitor/geolocation
 
 para instalar google maps 
 --npm i @capacitor/google-maps

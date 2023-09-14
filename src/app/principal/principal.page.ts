@@ -22,6 +22,9 @@ export class PrincipalPage implements OnInit {
   per(){
     this.router.navigate(['/perfil'])
   }
+  calendar(){
+    this.router.navigate(['/reserva'])
+  }
   
   mapa(){
     this.router.navigate(['/mapa'])

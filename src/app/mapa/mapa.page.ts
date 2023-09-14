@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { GoogleMap} from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mapa',
@@ -11,9 +12,14 @@ export class MapaPage implements OnInit {
   @ViewChild('map')mapRef!: ElementRef;
   map!: GoogleMap;
 
-  constructor() { }
+  constructor(private router:Router) { }
   
   ngOnInit() {
+  }
+
+  volver(){
+    this.router.navigate(['/principal'])
+
   }
 
   ionViewDidEnter(){

@@ -10,10 +10,11 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">Categoria</ion-content>
+  <!--<ion-label class="ion-padding">Categoria</ion-label>-->
   <ion-item (click)="per()">Perfil</ion-item>
   <ion-item>Configuración</ion-item>
   <ion-item>Mensajes</ion-item>
+  <ion-item routerLink ="/chatbox-outline" slot="start">Contactos</ion-item>
   <ion-item>Pagos</ion-item>
   <ion-item>Viajes</ion-item>
   <ion-item>Ser Conductor</ion-item>
@@ -29,19 +30,31 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">Bienvenid@ alumn@</ion-content>
+  <ion-label class="ion-padding">Bienvenid@ alumn@</ion-label>
    <!--<img src="assets/img/user-interface (1).png" alt="Imagen" width="50" height="50">-->
    
 
 
    <ion-content class="ion-text-center"> <!-- Clase para centrar el contenido -->
-    <ion-label>Viajes</ion-label>
+    <ion-label>Viajes</ion-label><br>
   <ion-button (click)="map()">
     <img (click)="mapa()" src="assets/img/coche.png" alt="Imagen" width="100" height="100">
+  </ion-button> <br>
+  <ion-label>Reservar</ion-label> <br>
+  <ion-button>
+    <img (click)="calendar()"src="assets/img/calendario (1).png" alt="Imagen" width="100" height="100">
   </ion-button>
-</ion-content>
-  
-</div>
+ <ion-footer>
+   <img src="assets/img/log.png" alt="logo">
+   <ion-label>Copyright © DUOCUC By Kimyon1 and Belias</ion-label>
+  </ion-footer>
+
+ </ion-content>
+</div>  
+
+
+
+
 
 
 
