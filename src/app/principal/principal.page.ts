@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,10 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./principal.page.scss'],
 })
 export class PrincipalPage implements OnInit {
-
-  constructor(private router: Router) { }
+  usuario!: string | null;
+  correo!: string | null;
+  fono!: number | null;
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
+    this.usuario = this.authService.getUser();
+    this.fono = this.authService.getFono();
+    this.correo = this.authService.getMail();
+    console.log(this.usuario);
   }
   cerrar(){
     this.router.navigate(['/home'])}

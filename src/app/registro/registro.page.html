@@ -18,27 +18,27 @@
   <div class="link">
     <ion-label>Nombres</ion-label>
     <ion-card class="textfield">
-      <ion-input></ion-input>
+      <ion-input id="nombre"></ion-input>
     </ion-card>
 
     <ion-label>Apellidos</ion-label>
     <ion-card class="textfield">
-      <ion-input></ion-input>
+      <ion-input id="apellido"></ion-input>
     </ion-card>
 
      <ion-label>Telefono</ion-label>
     <ion-card class="textfield"> 
-      <ion-input></ion-input>
+      <ion-input id="fono"></ion-input>
     </ion-card>
 
     <ion-label placeholder="example@duocuc.cl">Email</ion-label >
     <ion-card class="textfield">  
-      <ion-input placeholder="example@duocuc.cl"></ion-input>
+      <ion-input placeholder="example@duocuc.cl" id="correo"></ion-input>
     </ion-card>
 
     <ion-label>Contraseña</ion-label>
     <ion-card class="textfield">
-      <ion-input></ion-input>
+      <ion-input id="contra"></ion-input>
     </ion-card>
     
    
@@ -46,7 +46,7 @@
     <ion-card class="textfield">
     <ion-input></ion-input>
     </ion-card>
-    <ion-button (click)="inicioses()">Aceptar</ion-button>
+    <ion-button (click)="inicioses()" (click)="createPost()" >Aceptar</ion-button>
   </div>
   
 </ion-content>
