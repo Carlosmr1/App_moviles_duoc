@@ -14,3 +14,27 @@ clave api
 
 letras 
 ng generate component animated-text
+
+                /
+-----------------------------------
+crear token
+-----------------------------------
+npm i --save-dev @types/uuid
+-----------------------------------
+                /
+-----------------------------------
+trigger para que reemplace la hora 
+-----------------------------------
+CREATE OR REPLACE TRIGGER TRG_TOKEN
+BEFORE INSERT ON reset_con_token
+FOR EACH ROW
+BEGIN 
+  :NEW.fecha_creacion := SYSTIMESTAMP;
+END;
+-----------------------------------
+                /
+-----------------------------------
+Sendgrid 
+-----------------------------------
+npm install --save @sendgrid/mail
+-----------------------------------
