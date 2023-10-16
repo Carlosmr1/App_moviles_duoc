@@ -14,11 +14,13 @@ export class PrincipalPage implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
-    this.usuario = this.authService.getUser();
+    const userObject = this.authService.getUser();
+    this.usuario = userObject.usuario;
+    this.correo = userObject.correo;
     this.fono = this.authService.getFono();
-    this.correo = this.authService.getMail();
     console.log(this.usuario);
   }
+  
   cerrar(){
     this.router.navigate(['/home'])}
 
