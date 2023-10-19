@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="logo">
+    <img src="assets/img/logoapp2.png" alt="milogo">
+  </div>
+
+
+  <div class="link">
+
+
+
+    <ion-label placeholder="example@duocuc.cl">Email</ion-label >
+    <ion-card class="textfield">  
+      <ion-input placeholder="example@duocuc.cl" id="correo"></ion-input>
+    </ion-card>
+
+    <ion-label>Contraseña</ion-label>
+    <ion-card class="textfield">
+      <ion-input id="contra"></ion-input>
+    </ion-card>
+    
+   
+    <ion-label>Repetir Contraseña</ion-label>
+    <ion-card class="textfield">
+    <ion-input id="reContra"></ion-input>
+    </ion-card>
+    <ion-button (click)="modificarContra()" >Aceptar</ion-button>
+  </div>
+  
+</ion-content>
