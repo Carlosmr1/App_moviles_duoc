@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'reserva',
     loadChildren: () => import('./reserva/reserva.module').then( m => m.ReservaPageModule)
   },
+  {
+    path: 'rec-con',
+    loadChildren: () => import('./rec-con/rec-con.module').then( m => m.RecConPageModule)
+  },
 
 
 

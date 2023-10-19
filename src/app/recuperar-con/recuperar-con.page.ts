@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PasswordRecoveryService } from '../password-recovery.service';
-import { v4 as uuidv4 } from 'uuid';
+import { ApiService } from '../base-de-datos.service';
 
 
 
@@ -15,36 +15,47 @@ import { v4 as uuidv4 } from 'uuid';
 
 export class RecuperarConPage {
   // se implementa la ruta a esta pagina y el nuevo sericio de recuperar contraseña
-  constructor(private router: Router, private recoveryService: PasswordRecoveryService) { }
+  posts = [];
+  constructor(private router: Router, private recoveryService: PasswordRecoveryService, private api: ApiService) { }
 
 
 
-  onSubmit(correo: string) {
-    this.recoveryService.verifcarEmail(correo).subscribe((response) => {
-      if ('valid' in response && response.valid) {
-        // constante para creacion de token
-        const token = uuidv4();
-        // constante para almacenar fecha expiracion de token
-        const expiryDate = new Date();
-        // fija la fecha de expiracion para 5 min despues de ser creada
-        expiryDate.setMinutes(expiryDate.getMinutes() + 5);
-        // intenta guardar el token en la base de datos
-        this.recoveryService.guardarToken(token, correo, expiryDate).subscribe((tokenResponse) => {
-          if ('success' in tokenResponse && tokenResponse.success) {
-            // this.recoveryService.enviarCorreoRecuperacion(correo, token);
-            console.log("El token fue creado con éxito");
-          } else {
-            console.log("No se puede crear el token");
-          }
+  validar() {
+    var correo = (<HTMLInputElement>document.getElementById("correo")).value;
+    console.log(correo);
+    
+    // validacion
+    this.api.getPost(correo).subscribe((res) => {
+      console.log("Verificando: CORRESTO");
+      this.posts = res["items"];
+      this.recoveryService.enviarCorreo(
+        correo,
+        'Recuperación de Contraseña - DuocOnWheels',
+        `Estimado usuario de DuocOnWheels,
+      
+        Hemos recibido una solicitud de recuperación de contraseña para su cuenta. Para continuar con el proceso de recuperación, haga clic en el siguiente enlace:
+      
+        http://localhost:8100/rec-con
+      
+        Si no ha solicitado esta recuperación o considera que es un error, puede ignorar este mensaje.
+      
+        Por favor, tenga en cuenta que el enlace de recuperación de contraseña es válido por un tiempo limitado. Si no completa el proceso dentro del plazo especificado, deberá iniciar el proceso nuevamente.
+      
+        Gracias por utilizar DuocOnWheels.
+      
+        Atentamente,
+        El equipo de soporte de DuocOnWheels`)
+      .subscribe(
+        (response) => {
+          console.log('Correo enviado con éxito', response);
         },
-          (error) => {
-            console.error("Error al guardar el token:", error);
-          }
-        );
-      } else {
-        // Hacer algo si la dirección de correo electrónico no es válida
+        (error) => {
+          console.error('Error al enviar el correo', error);
+        }
+      );
 
-      }
-    });
+    }, (error) => {
+      console.log("Error");
+    })
   }
 }

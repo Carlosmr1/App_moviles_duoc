@@ -7,13 +7,8 @@
 <ion-content class="link" [fullscreen]="true">
   <ion-label>Email</ion-label><br>
   <ion-card class="textfield">
-    <ion-input type="text" class="mi-textfield" placeholder="example@duocuc.cl"></ion-input>
+    <ion-input type="text" class="mi-textfield" placeholder="example@duocuc.cl" id="correo"></ion-input>
   </ion-card>
 
-  <ion-label>Nueva Contraseña</ion-label>
-  <ion-card class="textfield">
-    <ion-input placeholder="Contraseña"></ion-input>
-  </ion-card>
-
-  <ion-button>Ingresar</ion-button>
+  <ion-button (click)="validar()">Ingresar</ion-button>
 </ion-content>

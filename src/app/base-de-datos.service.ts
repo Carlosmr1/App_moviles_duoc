@@ -19,6 +19,11 @@ export class ApiService {
  // Se declara la variable http de tipo HttpClient
  constructor(private http:HttpClient) { }
 
+ updatePost(id: string,post : {}):Observable<any>{
+  return this.http.put(this.apiURL+id,post,this.httpOptions).pipe
+  (retry(3));
+  }
+ 
  createPost(post={}):Observable<any> {
   return this.http.post(this.apiURL,post,this.httpOptions).pipe(
    retry(3)
