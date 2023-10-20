@@ -1,1 +1,17 @@
-ion-content{ --ion-background-color:#f8efbd};
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* O ajusta la altura según tu diseño */
+  }
+
+  ion-footer {
+    
+    height: min-content;
+
+
+  }
+
+  

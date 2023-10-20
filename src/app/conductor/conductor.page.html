@@ -1,13 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>conductor</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">conductor</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  <!--<ion-label class="ion-padding">Categoria</ion-label>-->
+ 
+  <ion-item>Configuración</ion-item>
+  <ion-item>Mensajes</ion-item>
+  <ion-item routerLink ="/chatbox-outline" slot="start">Contactos</ion-item>
+  <ion-item>Pagos</ion-item>
+  <ion-item (click)="perfil()">Perfil</ion-item>
+  <ion-item (click)="cerrars()">Cierre sesión </ion-item>
+
+  <!--<ion-item (click)="cerrar()">Cerrar sesión</ion-item>-->
+  
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="background-container"> 
+     <img src="assets/img/12.png" alt="logo">
+    <!-- Contenido dentro del contenedor -->
+  </div>
+  <ion-button>
+    <img src="assets/img/coche.png" alt="Imagen" width="100" height="100">
+  </ion-button> <br>
+
+
+
+
+  <!--<ion-label class="ion-padding">Bienvenid@ {{ usuario }} +569{{ fono }}</ion-label>-->
+  
+
+

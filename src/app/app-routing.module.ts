@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'conductor',
     loadChildren: () => import('./conductor/conductor.module').then( m => m.ConductorPageModule)
   },
+  {
+    path: 'perfconductor',
+    loadChildren: () => import('./perfconductor/perfconductor.module').then( m => m.PerfconductorPageModule)
+  },
 
 
 

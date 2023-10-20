@@ -4,21 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content >
+  <ion-header >            
     <ion-toolbar>
       <ion-title size="">Perfil Alumn@</ion-title>
     </ion-toolbar>
   </ion-header>
-   <img src="assets/img/user-interface (1).png" alt="Imagen" width="100" height="100"> <br>
-  <ion-label>Nombres: Martin Tilin</ion-label><br>
-  <ion-label>Apellidos: San Martin</ion-label><br>
-  <ion-label>Telefono: 9666111777</ion-label><br>
-  <ion-label placeholder="example@duocuc.cl">Email: martin.tieneunviolin@duocuc.cl</ion-label><br>
-  <ion-label>Dirección: La calle</ion-label><br>
   
-  <ion-button (click)="princ()">Volver</ion-button>
-
+  <div class="centered-content">
+    <img src="assets/img/user-interface (1).png" alt="Imagen" width="100" height="100">
+    <ion-label>Nombres: Martin Tilin</ion-label>
+    <ion-label>Apellidos: San Martin</ion-label>
+    <ion-label>Telefono: 9666111777</ion-label>
+    <ion-label>Email: martin.tieneunviolin@duocuc.cl</ion-label>
+    <ion-label>Dirección: La calle</ion-label>
+    <ion-button (click)="princ()">Volver</ion-button>
+  </div>
+  
 
 </ion-content>
 <ion-footer>
