@@ -39,9 +39,11 @@ export class IniciosesPage implements OnInit {
       this.posts = res["items"];
       if(res["contrasena"] == contra){
         const usuario = res["nombre"];
-        const fono = res["telefono"]
+        const fono = res["telefono"];
+
         this.authService.setDatos(usuario,correo,fono);
-        this.router.navigate(['/principal']);
+        if(res["conductor"]==1){this.router.navigate(['/conductor']);}else{
+        this.router.navigate(['/principal']);}
       }else{
         console.log("error")
       }

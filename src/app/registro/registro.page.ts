@@ -14,16 +14,26 @@ import { IonicModule } from '@ionic/angular';
 })
 
 export class RegistroPage implements OnInit {
+
+  conductor = 0 ;
   constructor(private router:Router, private api : ApiService) {}
-  
+  chConductor: boolean = false;
   // metodo crear post
   createPost(){
     //variables para obtener los datos del imput
+    if(this.chConductor){
+      this.conductor = 1
+    }else{
+      this.conductor = 0
+    }
     var nombre = (<HTMLInputElement>document.getElementById("nombre")).value;
     var apellido = (<HTMLInputElement>document.getElementById("apellido")).value;
     var fono = (<HTMLInputElement>document.getElementById("fono")).value;
-    var contra = (<HTMLInputElement>document.getElementById("contra")).value;
+    var contra = (<HTMLInputElement>document.getElementById("contras")).value;
     var correo = (<HTMLInputElement>document.getElementById("mail")).value;
+    var conductor = this.conductor;
+    
+
     console.log(contra);
     console.log(nombre);
     // variable que almacena los elementos que se van a postear en este caso contraseña correo nombre y telefono
@@ -31,7 +41,8 @@ export class RegistroPage implements OnInit {
       contrasena: contra,
       correo: correo,
       nombre: nombre + ' ' + apellido,
-      telefono: fono
+      telefono: fono,
+      conductor: conductor
     };
     // creacion de post => intenta crear el "post" pasando los datos, si tiene exito aparecera por consola success
     this.api.createPost(post).subscribe((success)=>{
