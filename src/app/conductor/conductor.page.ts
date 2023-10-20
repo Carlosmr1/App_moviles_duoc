@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-conductor',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConductorPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
+
+
+  perfil(){
+    this.router.navigate(['/perfconductor'])
+  }
+
+  cerrars(){
+    this.router.navigate([['/inicioses']])
+
+  }
+
+
+
+
 
 }

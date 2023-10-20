@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'rec-con',
     loadChildren: () => import('./rec-con/rec-con.module').then( m => m.RecConPageModule)
   },
+  {
+    path: 'perfconductor',
+    loadChildren: () => import('./perfconductor/perfconductor.module').then( m => m.PerfconductorPageModule)
+  },
 
 
 
