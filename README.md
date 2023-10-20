@@ -9,7 +9,12 @@ para instalar google maps
 --npm i @capacitor/google-maps
 para instalar geolocation
 --npm i @capacitor/geolocation
+INICIAR SERVIDOR NODE.JS
+node index.js
+
+
 clave api
+
 
 
 letras 
