@@ -22,11 +22,13 @@ export class RegistroPage implements OnInit {
     var nombre = (<HTMLInputElement>document.getElementById("nombre")).value;
     var apellido = (<HTMLInputElement>document.getElementById("apellido")).value;
     var fono = (<HTMLInputElement>document.getElementById("fono")).value;
-    var contrasena = (<HTMLInputElement>document.getElementById("contra")).value;
-    var correo = (<HTMLInputElement>document.getElementById("correo")).value;
+    var contra = (<HTMLInputElement>document.getElementById("contra")).value;
+    var correo = (<HTMLInputElement>document.getElementById("mail")).value;
+    console.log(contra);
+    console.log(nombre);
     // variable que almacena los elementos que se van a postear en este caso contraseña correo nombre y telefono
     var post={
-      contrasena: contrasena,
+      contrasena: contra,
       correo: correo,
       nombre: nombre + ' ' + apellido,
       telefono: fono
@@ -34,7 +36,6 @@ export class RegistroPage implements OnInit {
     // creacion de post => intenta crear el "post" pasando los datos, si tiene exito aparecera por consola success
     this.api.createPost(post).subscribe((success)=>{
     console.log(success);}
-    // si no tiene exito aparecera error
     ,error=>{
     console.log(error);
     })
