@@ -27,7 +27,7 @@ capacitor-google-map{
     text-align: center;
 }
 
-ion-content{ --ion-background-color:#f8efbd};
+ion-content{ --background: linear-gradient(to bottom, #3498db, #2c3e50); };
 ion-content {
   #map {
     width: 100%;

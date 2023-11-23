@@ -7,13 +7,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="">Inicio Sesion</ion-title>
+     
+ <ion-title size="">Inicio Sesion</ion-title>
+   
     </ion-toolbar>
+     
   </ion-header>
-  <div id="logo">
-    <img src="assets/img/logoapp2.png" alt="milogo" />
-  </div>
-  <div id="sesion" class="link">
+    
+  <div class="container">
+    <div id="logo">
+      <img src="assets/img/logopeq.png" alt="milogo" />
+    </div>
+  
+    
+   <form>
+   <div id="sesion" class="link">
     <ion-label> Email </ion-label>
 
     <ion-card class="mi-textfield">
@@ -34,10 +42,16 @@
       ></ion-input>
     </ion-card>
 
-    <ion-button (click)="getId()"> Ingresar </ion-button> <br />
+    <ion-button (click)="getId()">Ingresar </ion-button> <br />
     <div class="link">
       <a (click)="registro()">¿No tiene cuenta?</a><br />
       <a (click)="recuperar()">¿Olvido su contraseña?</a>
     </div>
-  </div>
+  </div></form></div>
+  
+<ion-footer>
+  <img src="assets/img/log.png" alt="logo">
+  <ion-label>Copyright © DUOCUC By Kimyon1 and Belias</ion-label>
+</ion-footer>
+
 </ion-content>
