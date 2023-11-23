@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="link" [fullscreen]="true">
+  <ion-label>Email</ion-label><br>
+  <ion-card class="textfield">
+    <ion-input type="text" class="mi-textfield" placeholder="example@duocuc.cl" id="correo"></ion-input>
+  </ion-card>
+
+  <ion-button (click)="validar()">Ingresar</ion-button>
+</ion-content>

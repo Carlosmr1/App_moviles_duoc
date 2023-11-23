@@ -1,0 +1,19 @@
+.background-con {
+    background-color: rgba(221, 212, 250, 0.614);
+    background-size: 100px; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    /* Otros estilos, como altura y margen, según tus necesidades */
+    height: 100vh; /* Ajusta la altura del contenedor según tu diseño */
+  }
+
+
+  ion-card-content{ --ion-background-color: black };
+
+  ion-button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  

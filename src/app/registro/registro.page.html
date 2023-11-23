@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="logo">
+    <img src="assets/img/logoapp2.png" alt="milogo" />
+  </div>
+
+  <form class="form">
+  <div class="link">
+    <ion-label>Nombres</ion-label>
+    <ion-card class="textfield">
+      <ion-input id="nombre"></ion-input>
+    </ion-card>
+
+    <ion-label>Apellidos</ion-label>
+    <ion-card class="textfield">
+      <ion-input id="apellido"></ion-input>
+    </ion-card>
+
+    <ion-label>Telefono</ion-label>
+    <ion-card class="textfield">
+      <ion-input id="fono"></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-list>
+        <ion-label>Eres conductor</ion-label>
+        <ion-item>
+          <ion-label>Sí</ion-label>
+          <ion-checkbox [(ngModel)]="chConductor" id="check"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-label placeholder="example@duocuc.cl">Email</ion-label>
+    <ion-card class="textfield">
+      <ion-input placeholder="example@duocuc.cl" id="mail"></ion-input>
+    </ion-card>
+
+    <ion-label>Contraseña</ion-label>
+    <ion-card class="textfield">
+      <ion-input id="contras"></ion-input>
+    </ion-card>
+
+    <ion-label>Repetir Contraseña</ion-label>
+    <ion-card class="textfield">
+      <ion-input></ion-input>
+    </ion-card>
+    <ion-button (click)="createPost()" (click)="inicioses()"
+      >Aceptar</ion-button
+    >
+  </div></form>
+</ion-content>

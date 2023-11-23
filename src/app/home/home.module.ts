@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
+import { HomePage } from './home.page';
+
+import { HomePageRoutingModule } from './home-routing.module';
+//Agregué
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+//import {Router, NavigationExtras, RouterLinkWithHref} from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//api mapa
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    //Agregué
+    MatButtonToggleModule,
+  ],
+  declarations: [HomePage],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+})
+export class HomePageModule {}
