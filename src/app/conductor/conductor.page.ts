@@ -9,6 +9,9 @@ import { AuthService } from '../auth.service';
 })
 export class ConductorPage implements OnInit {
 
+  usuario!: string | null;
+  correo!: string | null;
+  fono!: number | null;
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {

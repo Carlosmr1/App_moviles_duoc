@@ -3,11 +3,13 @@
     <ion-title>Perfil Conductor</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-label class="ion-padding">Bienvenid@ {{ usuario }} +569{{ fono }}</ion-label>
 
 <ion-content >
   <ion-header >  
     <ion-toolbar>
       <ion-title size="">Perfil Conductor</ion-title>
+      
     </ion-toolbar>
   </ion-header>
 </ion-content>
@@ -15,12 +17,12 @@
 <div class="background-con"> 
   <img src="assets/img/12.png" alt="logo">
   <div class="centered-content">
+    
    <ion-card-content>
-    <ion-card-content></ion-card-content><ion-label>Nombres: Martin Tilin</ion-label><br></ion-card-content>
-    <ion-card-content> <ion-label>Apellidos: San Martin</ion-label><br></ion-card-content>
-    <ion-card-content> <ion-label>Telefono: 9666111777</ion-label><br></ion-card-content>
-    <ion-card-content><ion-label>Email: martin.tieneunviolin@duocuc.cl</ion-label><br></ion-card-content>
-    <ion-card-content> <ion-label>Dirección: La calle</ion-label></ion-card-content>
+    <ion-label>Nombres: {{usuario}}</ion-label><br>
+    <ion-label>Telefono: {{fono}}</ion-label><br>
+    <ion-label placeholder="example@duocuc.cl">Email: {{correo}}</ion-label><br>
+    <ion-label>Dirección: La calle</ion-label><br></ion-card-content>
     <ion-button (click)="volver()" >Volver</ion-button>
     <!-- Contenido dentro del contenedor -->
   </div>
