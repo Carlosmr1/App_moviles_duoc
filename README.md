@@ -45,5 +45,5 @@ npm install --save @sendgrid/mail
 -----------------------------------
 INICIAR SERVIDOR NODE.JS
 
-node index.js
+node index.js 
 -----------------------------------

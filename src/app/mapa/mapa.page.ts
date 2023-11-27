@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Geolocation } from '@capacitor/geolocation';
-
+import{ GoogleMap } from '@capacitor/google-maps';
+import { ViewChild, ElementRef } from '@angular/core';
 declare var google: any;
 
 interface Marker {
@@ -19,6 +20,9 @@ interface Marker {
   styleUrls: ['./mapa.page.scss'],
 })
 export class MapaPage implements OnInit {
+
+  @ViewChild('map') mapRef!: ElementRef<HTMLElement> ;
+    newMap!: GoogleMap;
 
   map = null;
   markers: Marker[] = [];
