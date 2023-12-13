@@ -5,10 +5,21 @@
 </ion-header>
 
 <ion-content class="link" [fullscreen]="true">
-  <ion-label>Email</ion-label><br>
+ <div class="container">
+  <div id="logo">
+    <img src="assets/img/logopeq.png" alt="milogo" />
+  </div>
+  <form class="col"><ion-label>Email</ion-label><br>
   <ion-card class="textfield">
     <ion-input type="text" class="mi-textfield" placeholder="example@duocuc.cl" id="correo"></ion-input>
   </ion-card>
 
-  <ion-button (click)="validar()">Ingresar</ion-button>
+  <ion-button (click)="validar()">Ingresar</ion-button></form></div>
+
+  
+
 </ion-content>
+<ion-footer>
+    <img src="assets/img/log.png" alt="logo">
+    <ion-label>Copyright © DUOCUC By Kimyon1 and Belias</ion-label>
+  </ion-footer>
