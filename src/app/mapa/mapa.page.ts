@@ -21,12 +21,14 @@ interface Marker {
 })
 export class MapaPage implements OnInit {
 
+
   @ViewChild('map') mapRef!: ElementRef<HTMLElement> ;
     newMap!: GoogleMap;
 
   map = null;
   markers: Marker[] = [];
   pressTimer: any;
+  
 
   constructor(private router: Router) {}
   
