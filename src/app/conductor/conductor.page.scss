@@ -1,5 +1,5 @@
 .background-container {
-  background-color: rgba(221, 212, 250, 0.614);
+  background-color: #ddd4fa9d;
   background-size: 100px; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen horizontal y verticalmente */
   background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
@@ -11,4 +11,24 @@ ion-button {
 display: block;
 align-items: column;
 justify-content: center;  
+}
+
+
+.ion-color{
+  background-color: #6ba5e0;
+  color: #d154e7;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  font-size: 14px;
+}
+
+.centrar-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Esto asegura que la altura del contenedor sea del 100% del ion-item */
+}
+
+ion-content {
+  --background: linear-gradient(to bottom,  #ddd4fa9d, #eaecee); 
 }

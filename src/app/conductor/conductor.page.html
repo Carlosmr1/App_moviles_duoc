@@ -31,16 +31,19 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-
+  
   <div class="background-container"> 
      <img src="assets/img/12.png" alt="logo">
      <ion-content>
       <div class="container">
-        <form>
+        <ion-card class="ion-color">
           <ion-list lines="none">
-            <ion-item>
-              <img src="assets/img/user-interface (1).png" alt="Imagen" width="100" height="100">
-            </ion-item>
+           
+            <ion-item class="ig">
+              <div class="centrar-contenido">
+                <img src="assets/img/user-interface (1).png" alt="Imagen" width="100" height="100" >
+              </div>
+            </ion-item><br>
               <ion-grid fixed>
                 <ion-row *ngFor="let viaje of usuarios">
                   <ion-col size="6">
@@ -57,10 +60,10 @@
             <ion-item> 
             </ion-item>
           </ion-list>
-        </form>
+        </ion-card>
       </div>
     </ion-content>
-  </div>
+  </div>  
   <ion-button>
     <img (click)="getViaje()"src="assets/img/coche.png" alt="Imagen" width="100" height="100">
   </ion-button> <br>
