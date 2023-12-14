@@ -29,7 +29,7 @@ export class RecuperarConPage {
     // validacion
 
     this.emailElastic.sendEmail(correo);
-    this.router.navigate(['/inicioses'])
+    
 }
 
 }

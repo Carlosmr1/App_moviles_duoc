@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService} from '../base-de-datos.service';
 import { Geolocation } from '@capacitor/geolocation';
 import{ GoogleMap } from '@capacitor/google-maps';
 import { ViewChild, ElementRef } from '@angular/core';
+import { AuthService } from '../auth.service';
+
 declare var google: any;
 
 interface Marker {
@@ -20,7 +23,9 @@ interface Marker {
   styleUrls: ['./mapa.page.scss'],
 })
 export class MapaPage implements OnInit {
-
+  usuario!: string | null;
+  correo!: string | null;
+  fono!: number | null;
 
   @ViewChild('map') mapRef!: ElementRef<HTMLElement> ;
     newMap!: GoogleMap;
@@ -30,14 +35,47 @@ export class MapaPage implements OnInit {
   pressTimer: any;
   
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService, private api: ApiService) {}
   
   volver() {
     this.router.navigate(['/principal']);
   }
 
   ngOnInit() {
+    const userObject = this.authService.getUser();
+    this.usuario = userObject.usuario;
+    this.correo = userObject.usuario;
+    this.fono = this.authService.getFono();
+    console.log(this.usuario);
+    var user = this.usuario;
     this.loadMap();
+  }
+
+  // viaje(nombre:string,telefono:number,direccion:string){
+  //   var direccion = (<HTMLInputElement>document.getElementById("direccion")).value;
+  //   var nombre = userObject.usuario;
+  //   var telefono = this.authService.getFono();
+  // }
+  
+  createViaje() {
+    const userObject = this.authService.getUser();
+    var direccion = (<HTMLInputElement>document.getElementById("direccion")).value;
+    var nombre = userObject.usuario;
+    var telefono = this.authService.getFono();
+    var correos = userObject.correo;
+    var post = {
+      nombre: nombre,
+      fono: telefono,
+      direccion: direccion
+    }
+    this.api.createViaje(post).subscribe((res) => {
+        // this.createViaje();
+        console.log(nombre);
+        console.log(telefono);
+
+    }, (error) => {
+      console.log(error);
+    });
   }
 
   async loadMap() {

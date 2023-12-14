@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
+import { guardinho } from './guardinho.guard';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {
+    path: 'ruta-protegida',
+    canActivate: [guardinho],
+    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
+  },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)

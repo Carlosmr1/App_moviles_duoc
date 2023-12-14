@@ -34,10 +34,35 @@
 
   <div class="background-container"> 
      <img src="assets/img/12.png" alt="logo">
-    <!-- Contenido dentro del contenedor -->
+     <ion-content>
+      <div class="container">
+        <form>
+          <ion-list lines="none">
+            <ion-item>
+              <img src="assets/img/user-interface (1).png" alt="Imagen" width="100" height="100">
+            </ion-item>
+              <ion-grid fixed>
+                <ion-row *ngFor="let viaje of usuarios">
+                  <ion-col size="6">
+                    Nombre: {{viaje.nombre}} Fono: {{viaje.fono}} Destino: {{viaje.direccion}}
+                  </ion-col>
+                     
+                  <ion-col size="6"></ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-content>
+                <!-- {{viaje.fono}} -->
+              </ion-card-content>
+            
+            <ion-item> 
+            </ion-item>
+          </ion-list>
+        </form>
+      </div>
+    </ion-content>
   </div>
   <ion-button>
-    <img src="assets/img/coche.png" alt="Imagen" width="100" height="100">
+    <img (click)="getViaje()"src="assets/img/coche.png" alt="Imagen" width="100" height="100">
   </ion-button> <br>
 
 

@@ -16,7 +16,7 @@
       <span class="word orange">ir?</span>
       <span class="word purple"></span>
       <ion-card>
-        <ion-input class="textfield" placeholder="Ingrese Ubicación">
+        <ion-input class="textfield" id="direccion" placeholder="Ingrese Ubicación">
          
         </ion-input>
        </ion-card>
@@ -25,7 +25,7 @@
   </div>
 
   
-  <ion-button class="boton">Buscar</ion-button>
+  <ion-button  (click)="createViaje()"class="boton">Buscar</ion-button>
   <ion-button (click)= "volver()"class="boton1">Volver</ion-button>
 </ion-content>
 
